@@ -1,0 +1,1 @@
+Private Events is an app that alows you to create events and sign up for events.
