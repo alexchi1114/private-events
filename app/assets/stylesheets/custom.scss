@@ -1,0 +1,25 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h1 {
+	text-align:center;
+}
+
+ul {
+	list-style:none;
+}
+
+.navbar-brand a{
+	padding:8px;
+}
+
+.center {
+	text-align:center;
+}
+
+/* Forms */
+
+.form-container {
+	width:550px;
+}
+
