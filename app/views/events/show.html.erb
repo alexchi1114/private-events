@@ -1,0 +1,18 @@
+<h1><%= @event.name %></h1>
+<% unless current_user.attended_events.include? @event %>
+<div class = "center">
+	<%= form_for(current_user.invites.build(attended_event_id: @event.id))  do |f| %>
+	<%= f.hidden_field :attended_event_id, :value => @event.id %>
+		<%= f.submit "Attend Event", class: "btn btn-success" %>
+	<% end %>
+</div>
+<%end%>
+<h4>Creator: <%= @event.creator.name %></h4>
+<h4>Location: <%= @event.location%></h4>
+<h4>Description:</h4><%= @event.description %>
+
+<br> 
+<h4>Attending:</h4>
+<% @attendees.each do |attendee| %>
+	<li><%=attendee.name%></li>
+<%end%>

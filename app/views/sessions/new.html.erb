@@ -1,6 +1,9 @@
 <h1> Log In </h1>
+<div class = "container form-container">
 	<%= form_for(:session, url: login_path) do |f| %>
 		<%= f.label :name %>
-		<%= f.text_field :name %>
-		<%= f.submit "Log in" %>
+		<%= f.text_field :name, class: "form-control"%>
+		<br>
+		<%= f.submit "Log in", class: "btn btn-primary form-control" %>
 	<%end%>
+</div>
