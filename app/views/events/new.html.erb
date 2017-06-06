@@ -2,7 +2,7 @@
 <div class = "container">
 	<div class = 'form-group'>
 		<%= form_for(@event) do |f| %>
-
+    <%= render 'shared/error_messages', object: f.object %>
 		<%= f.label :name%>
       	<%= f.text_field :name, class: "form-control"%>
 
